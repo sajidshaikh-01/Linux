@@ -216,6 +216,53 @@ clear
 
 ---
 
-## ✔ Summary
+## 📌 Advanced Linux Commands
 
-These are the most commonly used Linux commands for beginners and DevOps engineers. Practice them daily to become comfortable using Linux.
+### 🔹 Networking Commands
+
+```bash
+ifconfig        # view network interfaces
+ip a            # modern alternative to ifconfig
+ping google.com # test connectivity
+netstat -tulnp  # view open ports
+ss -tulnp       # faster alternative to netstat
+curl http://example.com  # test URL/API
+wget http://example.com  # download files
+```
+
+### 🔹 Package Management
+
+#### On Ubuntu/Debian (APT)
+
+```bash
+sudo apt update
+sudo apt install nginx
+sudo apt remove nginx
+```
+
+#### On CentOS/RHEL (YUM/DNF)
+
+```bash
+sudo yum install httpd
+sudo yum update
+sudo yum remove httpd
+```
+
+### 🔹 Process Management (Advanced)
+
+```bash
+ps aux | grep nginx   # search for process
+kill 1234             # stop process by PID
+kill -9 1234          # force kill process
+systemctl status nginx
+systemctl start nginx
+systemctl stop nginx
+systemctl enable nginx
+```
+
+### 🔹 Permissions (Advanced)
+
+```bash
+chmod -R 755 /var/www/html   # recursive permissions
+chown -R user:group folder   # change owner recursively
+```

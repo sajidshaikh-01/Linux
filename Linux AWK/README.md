@@ -1,9 +1,6 @@
 # Linux AWK – Complete README
 
-`awk` is one of the most powerful text-processing tools in Linux. It is used for **searching, filtering, formatting, and data extraction**. Every DevOps engineer, SRE, and system administrator should know AWK.
-
-This README covers basics, syntax, patterns, fields, operators, and real-world DevOps use cases.
-
+`awk` is one of the most powerful text-processing tools in Linux. It is used for **searching, filtering, formatting, and data extraction**. 
 ---
 
 # 📌 1. What Is AWK?

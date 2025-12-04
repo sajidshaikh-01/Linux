@@ -1,280 +1,498 @@
-Ques: 1
-What is the use of echo command?
-echo is a command that outputs the strings that are passed to it
-as arguments.
+# Linux Basic Interview Questions – Complete README
+
+ These questions cover basic commands, networking, file operations, permissions, process management, SSH, cron jobs, and more.
+
+---
+
+# 📌 **Q1. What is the use of the `echo` command?**
+
+`echo` prints text/strings to the terminal.
+
+```
 echo "Hello World!"
+```
 
-Ques: 2
-How to check the computer name or hostname in Linux?
-Using 'hostname' command
+---
 
-Ques: 3
-How to check the name of current user in Linux terminal?
+# 📌 **Q2. How to check the computer name or hostname in Linux?**
+
+```
+hostname
+```
+
+---
+
+# 📌 **Q3. How to check the name of the current user?**
+
+```
 whoami
+```
 
+---
 
-Ques: 4
-How to check your current path/directory you are working in?
+# 📌 **Q4. How to check your current working directory?**
+
+```
 pwd
+```
 
-Ques: 5
-Explain the difference between relative and absolute path?
-Relative path: Start from current working directory
-Absolute path: The full path to a file or directory
+---
 
-Ques: 6
-Which command to be used to create a file in Linux?
-touch
+# 📌 **Q5. Difference between relative and absolute path?**
+
+* **Relative Path** → Starts from current directory
+* **Absolute Path** → Complete full path from root `/`
+
+---
+
+# 📌 **Q6. Which command is used to create a file?**
+
+```
+touch file
+vi file
+vim file
+nano file
+```
+
+---
+
+# 📌 **Q7. How to edit an existing file?**
+
+Using text editors like `vi`, `vim`, `nano`, etc.
+
+---
+
+# 📌 **Q8. How to rename a file in Linux?**
+
+```
+mv oldname newname
+```
+
+---
+
+# 📌 **Q9. How to search for a string in a file?**
+
+```
+grep "pattern" file
+```
+
+---
+
+# 📌 **Q10. Difference between grep and egrep?**
+
+* `grep` → Basic search
+* `egrep` → Extended regex, supports `|` for multiple patterns
+
+```
+egrep "key1|key2|key3"
+```
+
+---
+
+# 📌 **Q11. How can you read a file without using cat?**
+
+Using:
+
+```
+less
+more
 vi
-vim
-nano...
+bat
+```
 
-Ques: 7
-How will you edit an existing file on a Linux server?
-Using vi, vim, nano etc
+---
 
-Ques: 8
-How to rename a file in Linux?
-Using mv command
+# 📌 **Q12. Advantage of using `less` command?**
 
-Ques: 9
-How to search for a string in a file?
-Using grep command
+* Best for large files
+* Easy forward/backward navigation
+* Supports searching
 
-Ques: 10
-Difference between grep and egrep?
-In egrep, you can search for more than one strings at same time
-egrep "key1|key2|key4"
+---
 
-Ques: 11
-How can you read a file without using cat command?
-Using less, more, vi command and bat command 
+# 📌 **Q13. How to check file permissions?**
 
-Ques: 12
-What is the advantage of using less command?
-We can easily read big files.
-Forward and backward search is easy.
-Navigation from top to bottom is easy.
-
-Ques: 13
-How to check a file's permission?
+```
 ls -l
 ll
-getfacl file_name
+getfacl file
+```
 
-Ques: 14
-How to check the IP of your Linux server?
+---
+
+# 📌 **Q14. How to check server IP?**
+
+```
 ifconfig
 ip addr
+```
 
-Ques: 15
-How to read the top 5 lines in a file?
-head -5 file_name
+---
 
-Ques: 16
-How to read the last 5 lines in a file?
-tail -5 file_name
+# 📌 **Q15. How to read top 5 lines of a file?**
 
-Ques: 17
-How to list hidden files?
+```
+head -5 file
+```
+
+---
+
+# 📌 **Q16. How to read last 5 lines of a file?**
+
+```
+tail -5 file
+```
+
+---
+
+# 📌 **Q17. How to list hidden files?**
+
+```
 ls -la
+```
 
-Ques: 18
-How to see all the recently used commands?
+---
+
+# 📌 **Q18. How to see recently used commands?**
+
+```
 history
+```
 
-Ques: 19
-What is root?
-Admin or super user
-/root home directory for root user
-/ root directory
+---
 
-Ques: 20
-What is inode and how to find it for a file?
+# 📌 **Q19. What is root in Linux?**
+
+* Superuser / Administrator
+* `/root` is root’s home directory
+* `/` is root filesystem
+
+---
+
+# 📌 **Q20. What is an inode and how to check it?**
+
+```
 ls -li
-inode is an index node. It serves as a unique identifier for a
-specific piece of metadata on a given filesystem
+```
 
-Ques: 21
-Which command can you use for finding files on a Linux system?
-using find and locate command
+Inode = data structure storing metadata.
 
-Ques: 22
-Command for counting words and lines?
+---
+
+# 📌 **Q21. Command to find files?**
+
+```
+find
+locate
+```
+
+---
+
+# 📌 **Q22. Command for counting words and lines?**
+
+```
 wc
 wc -l
+```
 
-Ques: 23
-How can you combine two commands? or What is pipe used for?
-We can combine two commands using |
-ex: command1 | command2
-Pipe is used to combine two commands and redirect output of command1
-to command2
+---
 
-Ques: 24
-How to view the difference between two files?
+# 📌 **Q23. How to combine two commands? What is a pipe?**
+
+```
+command1 | command2
+```
+
+Pipe sends output of command1 → command2.
+
+---
+
+# 📌 **Q24. How to view difference between two files?**
+
+```
 diff file1 file2
+```
 
-Ques: 25
-What is the use of the shred command do? (permanently delete a file
-which is unable to recover)
-shred -u file_name
-shred --remove file_name
+---
 
-Ques: 26
-How to check system architecture info?
-dmidecode and lscpu
+# 📌 **Q25. What does shred do?**
 
-Ques: 27
-How to combine two files?
+Permanently deletes file so it cannot be recovered.
+
+```
+shred -u file
+```
+
+---
+
+# 📌 **Q26. How to check system architecture?**
+
+```
+lscpu
+dmidecode
+```
+
+---
+
+# 📌 **Q27. How to combine two files?**
+
+```
 cat file1 file2
-cat file1 file2 > file3
+cat file1 file2 > newfile
+```
 
-Ques: 28
-How can you find the type of file?
-file file_name
+---
 
-Ques: 29
-How to sort the content of a file?
-sort file_name
-cat file_name | sort
+# 📌 **Q28. Command to find file type?**
 
-Ques: 30
-Different ways to access a Linux server remotely (from a Windows
-machine)?
-Using some tools and terminal like
-- putty
-- git bash
-- ssh
+```
+file filename
+```
 
-Ques: 31
-What are different types of permissions for a file in Linux?
-- Read (r)
-- Write (w)
-- Executable (x)
+---
 
-Ques: 32
-How to check the permissions given to a file?
+# 📌 **Q29. How to sort file content?**
+
+```
+sort file
+cat file | sort
+```
+
+---
+
+# 📌 **Q30. Ways to access a Linux server remotely?**
+
+* Putty
+* Git Bash
+* SSH client
+
+---
+
+# 📌 **Q31. Types of file permissions?**
+
+* `r` → read
+* `w` → write
+* `x` → execute
+
+---
+
+# 📌 **Q32. How to check permissions of a file?**
+
+```
 ls -l
-ll
-getfacl file_name
+getfacl file
+```
 
-Ques: 33
-Which permission allow a user to run an executable file (script)
-We need to provide executable (x) permission to the user.
+---
 
-Ques: 34
-How to write the output of a command into a file?
-command > file_name
+# 📌 **Q33. Which permission allows executing a script?**
 
-Ques: 35
-How to write something in a file without deleting the existing
-content?
-We can append the file using >>
+`x` (execute permission)
 
-Ques: 36
-How to redirect an error of a command into a file?
-To redirect an error we need to use 2>
-To redirect both error and output, 2>&1
+---
 
-Ques: 37
-How to Automate any task or script?
-Using cron jobs
-For which we have crontab and at command.
+# 📌 **Q34. Redirect output to a file?**
 
-Ques: 38
-How to check scheduled jobs?
+```
+command > file
+```
+
+---
+
+# 📌 **Q35. Append output to a file without overwriting?**
+
+```
+command >> file
+```
+
+---
+
+# 📌 **Q36. Redirect errors to a file?**
+
+```
+command 2> error.log
+```
+
+Redirect output + error:
+
+```
+command > file 2>&1
+```
+
+---
+
+# 📌 **Q37. How to automate tasks?**
+
+Using cron jobs:
+
+```
+crontab -e
+```
+
+---
+
+# 📌 **Q38. How to check scheduled jobs?**
+
+```
 crontab -l
+```
 
-Ques: 39
-What is the meaning of this cron job? * * * * *
-min.hour.dayofmonth.month.dayofweek
+---
 
-Ques: 40
-What is daemon service?
-Service that keep running in background.
-Example: httpd, sshd, chronyd
+# 📌 **Q39. Meaning of cron pattern `* * * * *`?**
 
-Ques: 41
-How to check if a service is running or not?
-systemctl status service_name
+```
+min hour day month day_of_week
+```
 
-Ques: 42
-How to start/stop any service?
-systemctl start service_name
-systemctl stop service_name
+Runs every minute.
 
-Ques: 43
-How to check for free disk space?
-We can use df command
+---
 
-Ques: 44
-How to check the size of a directory's content?
-We can use du command
+# 📌 **Q40. What is a daemon service?**
 
-Ques: 45
-How to check CPU usage for a process?
-We can use top command
+Background service (e.g., sshd, httpd, chronyd).
 
-Ques: 46
-What is a process in Linux?
-An instance of a running program.
-Whenever you start a program/application or execute a command, a process is
-created.
-For every process a unique no. is assigned which is called PID (Process ID)
+---
 
-Ques: 47
-How to check if a process/application is running or not?
-Using ps command
+# 📌 **Q41. How to check if a service is running?**
 
-Ques: 48
-How to terminate/stop a running process?
-Using kill command
+```
+systemctl status service
+```
 
-Ques: 50
-Difference between kill and kill -9
-kill -9 will terminate a program forcefully
+---
 
-Ques: 51
-How to check if a IP/Server is accessible or not?
-We can use ping or telnet command
+# 📌 **Q42. Start/stop a service?**
 
-Ques: 52
-Which command to use to get info about ports?
-We can use netstat command
+```
+systemctl start service
+systemctl stop service
+```
 
-Ques: 53
-How to check open port on Linux system?
-netstat putan | grep port_no
+---
 
-Ques: 54
-How to check network interfaces in Linux?
-We can use ifconfig and netstat command
+# 📌 **Q43. How to check free disk space?**
 
-Ques: 55
-Difference between Telnet and SSH?
-SSH is secured and telnet is not.
+```
+df -h
+```
 
-Ques: 56
-Which service should be running on server to allow you to connect
-remotely?
-ssh or sshd
+---
 
-Ques: 57
-What is SSH?
-SSH or Secure Shell is a
-network communication protocol that enables two computers/devices to
-communicate and share data.
+# 📌 **Q44. How to check directory size?**
 
-Ques: 58
-Why it is called as Secure Shell?
-Because communication between host and client will be in encrypted format.
+```
+du -sh directory
+```
 
-Ques: 59
-WHat id default port for SSH?
+---
+
+# 📌 **Q45. How to check CPU usage of a process?**
+
+```
+top
+```
+
+---
+
+# 📌 **Q46. What is a process?**
+
+A running instance of a program, identified by a PID.
+
+---
+
+# 📌 **Q47. How to check if a process is running?**
+
+```
+ps aux
+```
+
+---
+
+# 📌 **Q48. How to terminate a running process?**
+
+```
+kill PID
+```
+
+---
+
+# 📌 **Q49. Difference between kill and kill -9?**
+
+`kill -9` forcefully terminates process.
+
+---
+
+# 📌 **Q50. How to check if a server/IP is reachable?**
+
+```
+ping server
+```
+
+Or test port:
+
+```
+telnet IP port
+```
+
+---
+
+# 📌 **Q51. Command to get port information?**
+
+```
+netstat
+```
+
+---
+
+# 📌 **Q52. How to check open ports?**
+
+```
+netstat -putan | grep <port>
+```
+
+---
+
+# 📌 **Q53. How to check network interfaces?**
+
+```
+ifconfig
+ip addr
+```
+
+---
+
+# 📌 **Q54. Difference between Telnet and SSH?**
+
+SSH is secure; Telnet is not.
+
+---
+
+# 📌 **Q55. Which service must run for remote login?**
+
+`sshd`
+
+---
+
+# 📌 **Q56. What is SSH?**
+
+Secure protocol for connecting to remote servers.
+
+---
+
+# 📌 **Q57. Why is it called Secure Shell?**
+
+Because communication is encrypted.
+
+---
+
+# 📌 **Q58. Default port for SSH?**
+
+```
 22
+```
 
-Ques: 60
-Which command is used to access a linux system from a terminal or
-another linux server?
-ssh user@198.168.x.x
+---
+
+# 📌 **

@@ -191,8 +191,90 @@ What is the meaning of this cron job? * * * * *
 min.hour.dayofmonth.month.dayofweek
 
 Ques: 40
-If your cron job didn't work, how would you check?
-check system time,
-crontab entry,
-check /var/log/messages
+What is daemon service?
+Service that keep running in background.
+Example: httpd, sshd, chronyd
 
+Ques: 41
+How to check if a service is running or not?
+systemctl status service_name
+
+Ques: 42
+How to start/stop any service?
+systemctl start service_name
+systemctl stop service_name
+
+Ques: 43
+How to check for free disk space?
+We can use df command
+
+Ques: 44
+How to check the size of a directory's content?
+We can use du command
+
+Ques: 45
+How to check CPU usage for a process?
+We can use top command
+
+Ques: 46
+What is a process in Linux?
+An instance of a running program.
+Whenever you start a program/application or execute a command, a process is
+created.
+For every process a unique no. is assigned which is called PID (Process ID)
+
+Ques: 47
+How to check if a process/application is running or not?
+Using ps command
+
+Ques: 48
+How to terminate/stop a running process?
+Using kill command
+
+Ques: 50
+Difference between kill and kill -9
+kill -9 will terminate a program forcefully
+
+Ques: 51
+How to check if a IP/Server is accessible or not?
+We can use ping or telnet command
+
+Ques: 52
+Which command to use to get info about ports?
+We can use netstat command
+
+Ques: 53
+How to check open port on Linux system?
+netstat putan | grep port_no
+
+Ques: 54
+How to check network interfaces in Linux?
+We can use ifconfig and netstat command
+
+Ques: 55
+Difference between Telnet and SSH?
+SSH is secured and telnet is not.
+
+Ques: 56
+Which service should be running on server to allow you to connect
+remotely?
+ssh or sshd
+
+Ques: 57
+What is SSH?
+SSH or Secure Shell is a
+network communication protocol that enables two computers/devices to
+communicate and share data.
+
+Ques: 58
+Why it is called as Secure Shell?
+Because communication between host and client will be in encrypted format.
+
+Ques: 59
+WHat id default port for SSH?
+22
+
+Ques: 60
+Which command is used to access a linux system from a terminal or
+another linux server?
+ssh user@198.168.x.x
